@@ -11,6 +11,10 @@ const port = process.env.PORT || 3000;
 
 app.use(cors());
 
+app.get('/', (req, res) => {
+    res.send('API is working');
+});
+
 app.get('/weather', async (req, res) => {
     const cityName = req.query.city;
 

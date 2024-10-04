@@ -27,7 +27,7 @@ export default function Home() {
     setForecastData([]);
 
     try {
-      const response = await fetch(`http://localhost:3000/weather?city=${cityName}`);
+      const response = await fetch(`https://weather-man-web-widget.vercel.app/weather?city=${cityName}`);
       const data = await response.json();
 
       if (response.ok) {
