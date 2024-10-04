@@ -44,13 +44,13 @@ export default function Home() {
   const getVideoSource = (weather: string) => {
     console.log(weather);
     switch (weather.toLowerCase()) {
-      case 'clear sky':
+      case weather.includes('sky') && weather:
         return '/videos/clear.mp4';
-      case 'few clouds':
+      case weather.includes('cloud') && weather:
         return '/videos/fewClouds.mp4';
-      case 'light rain':
+      case weather.includes('rain') && weather:
         return '/videos/rain.mp4';
-      case 'snow':
+      case weather.includes('snow') && weather:
         return '/videos/snow.mp4';
       case 'haze':
         return '/videos/clouds.mp4';
